@@ -6,7 +6,7 @@ const Header = () => {
         <div className='header-wrapper'>
             <div className='header-container'>
                 <p className='header-main'>Cashio</p>
-                <p className='header-sub'>A friendly cash register app.</p>
+                <p className='header-sub'>A friendly, minimal cash register</p>
             </div>
         </div>
     )

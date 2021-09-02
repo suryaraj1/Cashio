@@ -2,8 +2,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .main-input-wrapper {
   margin-top: 30px;
+}
+
+.main-btn {
+  display: flex;
+  height: 38px;
+  width: 90px;
+  outline: none;
+  border: none;
+  padding: 10px 12px;
+  background: #21b6b7;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #fafafa;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.main-btn:hover {
+  transform: translateY(-8px);
+  box-shadow: rgb(31 35 65 / 37%) 0px 20px 30px -11px;
+}
+
+.main-btn p {
+  margin-right: 7px;
+}
+
+.main-btn svg {
+  height: 14px;
+  width: 14px;
 }

@@ -1,0 +1,38 @@
+.input-wrapper {
+  width: 320px;
+  margin: 15px;
+  margin-bottom: 30px;
+}
+
+.input-header-wrapper {
+  margin-bottom: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+.input-header {
+  font-size: 23px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.input-box {
+  height: 60px;
+  width: 320px;
+  outline: none;
+  padding: 8px 12px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333333;
+  transition: 0.3s ease;
+  background: #eef3f6;
+}
+
+.input-box:focus {
+  border: 2px solid #21b6b7;
+}
+
+.input-box::placeholder {
+  color: #b3c5cd;
+}

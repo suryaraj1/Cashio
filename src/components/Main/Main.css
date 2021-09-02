@@ -1,0 +1,9 @@
+.main-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-input-wrapper {
+  margin-top: 30px;
+}

@@ -1,19 +1,25 @@
 import React from 'react';
 import './NotesTable.css';
 
-const NotesTable = () => {
+const validateNotesCount = notes => {
+    // should not be done this way
+    if (!notes.length) {
+        const zeroes = [0, 0, 0, 0, 0, 0, 0];
+        const notesUI = zeroes.map(zero => <td>{zero}</td>);
+        return notesUI;
+    } else {
+        const notesUI = notes.map(note => <td>{note}</td>);
+        return notesUI;
+    }
+}
+
+const NotesTable = ({ notes }) => {
     return (
         <div className='notes-table-wrapper'>
             <table className='notes-table'>
                 <tr>
                     <th>No. of Notes</th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    {validateNotesCount(notes)}
                 </tr>
                 <tr>
                     <th>Note</th>

@@ -29,7 +29,7 @@ class InputComponent extends React.Component {
   };
 
   render() {
-    const { inputTitle } = this.props;
+    const { inputTitle, alert } = this.props;
     return (
       <div className="input-wrapper">
         <div className="input-header-wrapper">

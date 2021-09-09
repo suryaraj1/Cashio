@@ -9,6 +9,7 @@ class Main extends React.Component {
     this.state = {
       billAmount: "",
       cashGiven: "",
+      alert: false,
       countOfNotes: [],
     };
   }
@@ -44,13 +45,25 @@ class Main extends React.Component {
         countOfNotes: this.calculateNotesNeeded(amountToReturn),
       });
     } else {
-      // render a component here
-      console.log("err");
+      this.setState({
+        alert: true
+      });
     }
   };
 
+  validateInput = () => {
+    const {billAmount, cashGiven } = this.state;
+    return (billAmount !== "" && cashGiven !== "");
+  }
+
+  isNegativeInputs = () => {
+    const { billAmount, cashGiven } = this.state;
+    return (parseInt(billAmount, 10) < 0 || parseInt(cashGiven, 10) < 0);
+  }
+
   render() {
     const { countOfNotes } = this.state;
+    console.log(this.isNegativeInputs());
     return (
       <div className="main-content-wrapper">
         <div className="main-input-wrapper">
@@ -60,11 +73,12 @@ class Main extends React.Component {
           />
           <InputComponent
             inputTitle="Cash Given"
+            alert={alert}
             callbackHandler={this.cashAmountHandler}
           />
         </div>
         <div className="main-btn-wrapper">
-          <button className="main-btn" onClick={this.onClickHandler}>
+          <button className={`main-btn ${!this.validateInput() && "disabled"}`} onClick={this.onClickHandler} disabled={!this.validateInput()}>
             <p>Check</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,6 +95,12 @@ class Main extends React.Component {
               />
             </svg>
           </button>
+        </div>
+        <div className='alert-container'>
+          {this.isNegativeInputs() && <div className='alert-wrapper'>
+            <p>{"Sorry, Bill Amount or Given Amount cannot be negative!"}</p>
+          </div>
+          }
         </div>
         <NotesTable notes={countOfNotes} />
       </div>

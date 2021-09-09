@@ -30,6 +30,14 @@
   box-shadow: rgb(31 35 65 / 37%) 0px 20px 30px -11px;
 }
 
+.main-btn.disabled {
+  opacity: 0.5;
+}
+
+.main-btn.disabled:hover {
+  transform: scale(1);
+}
+
 .main-btn p {
   margin-right: 7px;
 }
@@ -37,4 +45,22 @@
 .main-btn svg {
   height: 14px;
   width: 14px;
+}
+
+.alert-container {
+  height: 40px;
+  margin-top: 20px;
+}
+
+.alert-wrapper {
+  height: 40px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 28px;
+  background: #fee7e7;
+  color: #f76e6e;
+  font-weight: 700;
+  border-radius: 5px;
 }

@@ -53,7 +53,7 @@ class Main extends React.Component {
 
   validateInput = () => {
     const {billAmount, cashGiven } = this.state;
-    return (billAmount !== "" && cashGiven !== "");
+    return (billAmount !== "" && cashGiven !== "" && !this.isNegativeInputs());
   }
 
   isNegativeInputs = () => {
@@ -63,7 +63,6 @@ class Main extends React.Component {
 
   render() {
     const { countOfNotes } = this.state;
-    console.log(this.isNegativeInputs());
     return (
       <div className="main-content-wrapper">
         <div className="main-input-wrapper">

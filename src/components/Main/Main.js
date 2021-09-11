@@ -58,7 +58,7 @@ class Main extends React.Component {
 
   isNegativeInputs = () => {
     const { billAmount, cashGiven } = this.state;
-    return (parseInt(billAmount, 10) < 0 || parseInt(cashGiven, 10) < 0);
+    return (parseInt(billAmount, 10) <= 0 || parseInt(cashGiven, 10) <= 0);
   }
 
   render() {
@@ -97,7 +97,7 @@ class Main extends React.Component {
         </div>
         <div className='alert-container'>
           {this.isNegativeInputs() && <div className='alert-wrapper'>
-            <p>{"Sorry, Bill Amount or Given Amount cannot be negative!"}</p>
+            <p>{"Sorry, Bill Amount or Given Amount cannot be zero or negative!"}</p>
           </div>
           }
         </div>

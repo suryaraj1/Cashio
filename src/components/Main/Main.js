@@ -109,8 +109,8 @@ class Main extends React.Component {
                     <button
                         className={`main-btn ${
                             (!this.validateInput() ||
-                                !this.isCashGivenGreaterThanBillAmount()) &&
-                            "disabled"
+                                !this.isCashGivenGreaterThanBillAmount()) ?
+                            "disabled" : "success"
                         }`}
                         onClick={this.onClickHandler}
                         disabled={!this.validateInput()}

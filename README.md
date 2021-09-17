@@ -19,7 +19,7 @@ Well worry no more, Cashio is a solution to that 🎉. Manage your notes more ef
 
 <h2>🚀 Demo</h2>
 
-[https://cashio-mini.netlify.app/](https://cashio-mini.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/472213ce-73ae-48f8-9709-b69024f4ea3f/deploy-status)](https://cashio-mini.netlify.app/)
 
 <h2>Project Screenshots:</h2>
 
